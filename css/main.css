@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
 
 :root {
-    --background: black;
-    --foreground: white;
+    --background: white;
+    --foreground: black;
+    --background-variant: #424242;
 }
+
+/* ----------- BODY -------------- */
 
 body {
     background: var(--background);
@@ -34,26 +37,37 @@ nav ul li a {
     margin: 0.5rem;
 }
 
-/* ------------- HERO Page ---------- */
+/* ------------- HERO PAGE ---------- */
 
 .hero {
     display: flex;
-    border: 1px solid red;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.hero-profile {
+.hero-logo {
+    width: 50%;
+    max-width: 25rem;
+    height: fit-content;
+    position: relative;
     display: flex;
-    justify-content: center;
-    width: 50%;
-    border: 1px solid orange;
 }
 
-.hero-profile img {
-    border-radius: 100rem;
-    background: lightblue;
-    border: 2px solid green;
-    width: 50%;
-    margin: 5rem;
+.hero-logo-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.hero-logo-icon {
+    width: 30%;
+    border-radius: 50%;
+    background-color: grey;
+    border: 0.4rem solid white;
+    bottom: 0;
+    right: 0;
+    position: absolute;
 }
 
 .hero-text {
@@ -62,5 +76,17 @@ nav ul li a {
     text-align: center;
     justify-content: center;
     width: 50%;
-    border: 1px solid yellow;
+    max-width: 25rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-profile,
+    .hero-text {
+        width: auto;
+        margin-bottom: 0;
+    }
 }
