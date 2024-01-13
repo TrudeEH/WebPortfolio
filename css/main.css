@@ -9,7 +9,7 @@
 /* ----------- BODY -------------- */
 
 body {
-    background-image: url("/img/ipad-pro-stock-2020-apple-hd-2732x2732-765.jpg");
+    background-image: url("../img/ipad-pro-stock-2020-apple-hd-2732x2732-765.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--foreground);
