@@ -26,18 +26,63 @@ nav {
     border-radius: 50rem;
 }
 
-.nav-container {
-    display: flex;
-    justify-items: center;
-}
-
-.nav-container * {
-    margin-left: 0.4rem;
-}
-
 .nav-logo {
     border-radius: 50%;
     background: #424242;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: flex;
+    height: 90%;
+    justify-items: center;
+    margin-right: 0.1rem;
+    margin-left: 0.3rem;
+    transition: 0.3s;
+}
+
+nav li a {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 100rem;
+    width: 4.5rem;
+    color: var(--foreground);
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: none;
+    transition: 0.2s;
+}
+
+.active {
+    background: #bf4c4c;
+}
+
+li a:hover {
+    background-color: #111;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+    nav li a {
+        width: 2rem;
+    }
 }
 
 /* ------------- HERO PAGE ---------- */
