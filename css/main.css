@@ -10,10 +10,12 @@
 
 body {
     background-image: url("../img/ipad-pro-stock-2020-apple-hd-2732x2732-765.jpg");
-    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     color: var(--foreground);
     font-family: "Roboto", sans-serif;
+    background-color: black;
 }
 
 /* -------------- NAV --------------- */
@@ -34,7 +36,7 @@ nav {
 
 .nav-logo {
     border-radius: 50%;
-    background: #424242;
+    background-color: #00000056;
 }
 
 .nav-container {
@@ -117,8 +119,8 @@ li a:hover {
 .hero-logo-icon {
     width: 30%;
     border-radius: 50%;
-    background-color: grey;
-    border: 0.4rem solid black;
+    background-color: #00000056;
+    backdrop-filter: blur(16px);
     bottom: 0;
     right: 0;
     position: absolute;
