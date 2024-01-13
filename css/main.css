@@ -54,6 +54,7 @@ nav {
     height: fit-content;
     position: relative;
     display: flex;
+    margin-right: 1rem;
 }
 
 .hero-logo-image {
