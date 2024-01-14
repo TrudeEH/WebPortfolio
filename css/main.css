@@ -51,9 +51,10 @@ nav {
 .nav-logo {
     border-radius: 50%;
     background-color: #00000056;
+    transition: 0.3s;
 }
 
-.nav-container {
+#nav-container {
     display: flex;
     justify-content: right;
     width: 100%;
@@ -95,8 +96,22 @@ nav li a {
     background: #00000073;
 }
 
-li a:hover {
+li a:hover,
+.nav-logo:hover {
     background: #00000028;
+    transition: 0.3s;
+}
+
+.hide {
+    width: 2.55rem;
+}
+
+.hide #nav-container {
+    display: none;
+}
+
+.menuAlt {
+    background: #9a9a9a2f;
     transition: 0.3s;
 }
 
