@@ -176,16 +176,42 @@ h2 {
 }
 
 .hero-logo-image {
+    min-height: 23rem;
     height: 100%;
     width: 100%;
     border-radius: 50%;
     background-color: grey;
+    transition: all 1s ease-in-out;
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 50%;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 55% 40% 45% 40%;
+    }
+
+    25% {
+        border-radius: 50% 55% 45% 55%;
+    }
+
+    50% {
+        border-radius: 45% 55% 40% 50%;
+    }
+
+    75% {
+        border-radius: 55% 45% 55% 45%;
+    }
+
+    100% {
+        border-radius: 55% 40% 45% 40%;
+    }
 }
 
 .hero-logo-icon {
     width: 30%;
     border-radius: 50%;
-    background-color: #00000056;
+    background-color: #0000003f;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     bottom: 0;
