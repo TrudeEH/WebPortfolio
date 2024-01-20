@@ -19,8 +19,8 @@ article {
 /* ----------- BODY -------------- */
 
 html {
-    overflow-x: hidden;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 body {
