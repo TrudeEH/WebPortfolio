@@ -54,6 +54,32 @@ nav {
     z-index: 99;
 }
 
+.nav-close {
+    animation: navClose 0.2s ease-in;
+}
+
+@keyframes navClose {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 2.55rem;
+    }
+}
+
+.nav-open {
+    animation: navOpen 0.2s ease-in;
+}
+
+@keyframes navOpen {
+    from {
+        width: 2.55rem;
+    }
+    to {
+        width: 50%;
+    }
+}
+
 .nav-logo {
     border-radius: 50%;
     background-color: #00000056;
