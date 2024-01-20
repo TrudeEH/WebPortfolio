@@ -3,7 +3,6 @@ articles = document.querySelectorAll("article");
 pointer = 1;
 
 function menuToggle(x) {
-    
     if (x.classList.contains("menuAlt")) {
         document.getElementById("nav").classList.add("nav-open");
         setTimeout(() => {
@@ -43,27 +42,6 @@ window.addEventListener("wheel", (event) => {
         // Scroll up
         scrollToPreviousArticle();
     }
-});
-
-window.addEventListener("touchstart", (event) => {
-    if (event.touches.length > 1) {
-        // Handle multi-touch gestures
-        return;
-    }
-
-    let startY = event.touches[0].clientY;
-
-    window.addEventListener("touchmove", (event) => {
-        let currentY = event.touches[0].clientY;
-
-        if (currentY > startY) {
-            // Scroll down
-            scrollToNextArticle();
-        } else if (currentY < startY) {
-            // Scroll up
-            scrollToPreviousArticle();
-        }
-    });
 });
 
 function scrollToNextArticle() {
