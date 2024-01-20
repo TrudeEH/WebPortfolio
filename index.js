@@ -1,4 +1,6 @@
 const navElements = document.querySelectorAll("nav #nav-container a");
+articles = document.querySelectorAll("article");
+pointer = 1;
 
 function menuToggle(x) {
     x.classList.toggle("menuAlt");
@@ -15,44 +17,88 @@ navbarItems.forEach((item) => {
         }
 
         item.classList.add("active");
+        pointer = p;
     });
 });
 
+window.addEventListener("wheel", (event) => {
+    if (event.deltaY > 0) {
+        // Scroll down
+        scrollToNextArticle();
+    } else if (event.deltaY < 0) {
+        // Scroll up
+        scrollToPreviousArticle();
+    }
+});
 
-// Capture the scroll event
-window.addEventListener('wheel', function(e) {
-    e.preventDefault(); // Prevent the default scrolling
+window.addEventListener("touchstart", (event) => {
+    if (event.touches.length > 1) {
+        // Handle multi-touch gestures
+        return;
+    }
 
-    // Determine the direction of the scroll
-    var delta = Math.sign(e.deltaY);
+    let startY = event.touches[0].clientY;
 
-    // Scroll the page by 100vh in the direction of the scroll
-    window.scrollBy({
-        top: delta * window.innerHeight, // 100vh
-        behavior: 'smooth' // Smooth scrolling
+    window.addEventListener("touchmove", (event) => {
+        let currentY = event.touches[0].clientY;
+
+        if (currentY > startY) {
+            // Scroll down
+            scrollToNextArticle();
+        } else if (currentY < startY) {
+            // Scroll up
+            scrollToPreviousArticle();
+        }
     });
-}, { passive: false }); // Use passive: false to make preventDefault work
+});
 
+function scrollToNextArticle() {
+    if (pointer < articles.length) {
+        const currentArticle = articles[pointer - 1];
+        const nextArticle = articles[pointer];
+        if (nextArticle) {
+            // Calculate the offset to scroll to
+            const offset = pointer * currentArticle.clientHeight;
+            window.scrollTo({ top: offset, behavior: "smooth" });
+            pointer = pointer + 1;
 
-// Capture the touch swipe event
-let startY;
+            // Update nav
+            const activeItem = document.querySelector(".active");
 
-window.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-}, { passive: false }); // Use passive: false to make preventDefault work
+            if (activeItem) {
+                activeItem.classList.remove("active");
+            }
 
-window.addEventListener('touchstart', function(e) {
-    startY = e.touches[0].clientY;
-}, false);
+            navbarItems[pointer - 1].classList.add("active");
+        }
+    } else if (pointer == articles.length) {
+        const offset = pointer * articles[pointer - 1].clientHeight;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+    }
+    console.log(pointer);
+}
 
-window.addEventListener('touchend', function(e) {
-    let endY = e.changedTouches[0].clientY;
-    let deltaY = startY - endY;
+function scrollToPreviousArticle() {
+    if (pointer > 1) {
+        const prevArticle = articles[pointer - 1];
+        pointer = pointer - 1;
+        if (prevArticle) {
+            // Calculate the offset to scroll to
+            const offset = prevArticle.offsetTop - window.innerHeight;
+            window.scrollTo({ top: offset, behavior: "smooth" });
 
-    let direction = deltaY > 0 ? 1 : -1;
+            // Update nav
+            const activeItem = document.querySelector(".active");
 
-    window.scrollBy({
-        top: direction * window.innerHeight, // 100vh
-        behavior: 'smooth' // Smooth scrolling
-    });
-}, false);
+            if (activeItem) {
+                activeItem.classList.remove("active");
+            }
+
+            navbarItems[pointer - 1].classList.add("active");
+        }
+    } else {
+        const offset = pointer.offsetTop - window.innerHeight;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+    }
+    console.log(pointer);
+}
