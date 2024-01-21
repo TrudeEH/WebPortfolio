@@ -152,7 +152,7 @@ li a:hover,
     transition: 0.3s;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 820px) {
     nav {
         width: 90%;
         bottom: 0;
@@ -170,6 +170,7 @@ h2 {
 h2 {
     font-size: 2rem;
     margin-bottom: 4rem;
+    color: #ffffffbc;
 }
 
 h1 a {
@@ -278,7 +279,7 @@ h1 a {
 }
 
 /* Phone size */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 820px) {
     .hero {
         flex-direction: column;
         justify-content: flex-start;
@@ -317,6 +318,40 @@ h1 a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.skills-info h3 {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.skills-info {
+    background-color: #ffffff54;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 1rem;
+    width: 10rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 10%;
+    top: 140%;
+    padding: 1rem 0;
+}
+
+.skills-info ul {
+    margin: 0;
+    padding: 0;
+}
+
+.skills-info li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
 }
 
 /* -------------- Certs --------------- */

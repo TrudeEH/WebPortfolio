@@ -31,7 +31,7 @@
 }
 .orbit-wrap > li {
     position: absolute;
-    left: 50%;
+    left: 70%;
     top: 150%;
     transform: translate(-50%, -50%);
 }
@@ -208,11 +208,10 @@ ul[class^="ring"] li {
 }
 
 /* Phone size */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .orbit {
         font-size: 80%;
     }
-
     .orbit-wrap > li {
         left: 100%;
     }
