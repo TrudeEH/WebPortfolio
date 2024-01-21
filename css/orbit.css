@@ -208,8 +208,12 @@ ul[class^="ring"] li {
 }
 
 /* Phone size */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     .orbit {
-        font-size: 50%;
+        font-size: 80%;
+    }
+
+    .orbit-wrap > li {
+        left: 100%;
     }
 }
