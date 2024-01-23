@@ -173,20 +173,24 @@ ul[class^="ring"] li {
     -webkit-backdrop-filter: blur(16px);
     border-radius: 50%;
 }
-.orbit-center:hover .orbit-center__icon {
-    transform: rotateZ(0deg);
+
+@media only screen and (min-width: 750px) {
+    .orbit-center:hover .orbit-center__icon {
+        transform: rotateZ(0deg);
+    }
+    .orbit-center__icon {
+        transform: rotateZ(-360deg);
+        transition: all 300ms ease-in-out;
+    }
+    .orbit-wrap > li.orbit-center:hover ~ li > ul {
+        width: 0;
+        height: 0;
+    }
+    .orbit-wrap > li.orbit-center:hover ~ li > ul * {
+        transform: translate(0, 0);
+    }
 }
-.orbit-center__icon {
-    transform: rotateZ(-360deg);
-    transition: all 300ms ease-in-out;
-}
-.orbit-wrap > li.orbit-center:hover ~ li > ul {
-    width: 0;
-    height: 0;
-}
-.orbit-wrap > li.orbit-center:hover ~ li > ul * {
-    transform: translate(0, 0);
-}
+
 /* 
    animations 
    */
