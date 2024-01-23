@@ -422,7 +422,63 @@ h1 a {
 /* -------------- Projects --------------- */
 
 #projects {
-    background: #ffea49;
+    background: url(../img/andras-vas-Bd7gNnWJBkU-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-item {
+    width: 40%;
+    height: 40%;
+    background-color: #ffffff54;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+}
+
+.projects-item:hover {
+    transform: scale(102%);
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+}
+
+.projects-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 750px) {
+    #projects {
+        flex-direction: column;
+    }
+    .projects-item {
+        width: 80%;
+        height: 35%;
+    }
+}
+
+/* TV size */
+@media only screen and (min-width: 1250px) {
+    .projects-item {
+        height: 65%;
+    }
 }
 
 /* -------------- Contacts --------------- */
