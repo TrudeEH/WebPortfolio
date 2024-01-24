@@ -6,13 +6,16 @@
     --background-variant: #6f6f6f86;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: Yellowtail;
     src: url(../fonts/Yellowtail-Regular.ttf);
 }
 
 article {
-    height: 100vh;
     width: 100vw;
 }
 
@@ -36,6 +39,7 @@ body {
 
 /* -------------- NAV --------------- */
 nav {
+    box-sizing: content-box;
     position: fixed;
     width: 50%;
     display: flex;
@@ -202,6 +206,7 @@ h1 a {
 }
 
 .hero {
+    height: 100vh;
     background: url(../img/andras-vas-Bd7gNnWJBkU-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -388,7 +393,7 @@ h1 a {
 /* -------------- Certs --------------- */
 
 #certs {
-    background: url(../img/andras-vas-Bd7gNnWJBkU-unsplash.jpg);
+    background: url(../img/aaron-burden-QJDzYT_K8Xg-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -398,8 +403,8 @@ h1 a {
 }
 
 .certs-item {
-    width: 40%;
-    height: 40%;
+    width: 25rem;
+    height: 25rem;
     background-color: #ffffff54;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -466,13 +471,14 @@ h1 a {
     box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1000px) {
     #certs {
         flex-direction: column;
     }
     .certs-item {
-        width: 80%;
-        height: 35%;
+        width: 30rem;
+        max-width: 80%;
+        max-height: 22rem;
     }
     .certs-item img {
         height: 82%;
@@ -482,7 +488,8 @@ h1 a {
 /* TV size */
 @media only screen and (min-width: 1250px) {
     .certs-item {
-        height: 65%;
+        height: 35rem;
+        width: 35rem;
     }
 }
 
@@ -493,14 +500,17 @@ h1 a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    padding: 5rem;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .projects-item {
-    width: 40%;
-    height: 40%;
+    width: 100%;
+    height: fit-content;
     background-color: #ffffff54;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -510,7 +520,6 @@ h1 a {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    margin: 1rem;
     transition: 0.5s;
     -webkit-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
@@ -527,7 +536,7 @@ h1 a {
 
 .projects-item img {
     width: 100%;
-    height: 100%;
+    height: 17rem;
     border-radius: 0.6rem;
     object-fit: cover;
 }
@@ -569,22 +578,12 @@ h1 a {
 
 @media only screen and (max-width: 750px) {
     #projects {
-        flex-direction: column;
-    }
-    .projects-item {
-        width: 80%;
-        height: 35%;
-    }
-    .projects-item img {
-        height: 82%;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 /* TV size */
 @media only screen and (min-width: 1250px) {
-    .projects-item {
-        height: 65%;
-    }
 }
 
 /* -------------- Contacts --------------- */
