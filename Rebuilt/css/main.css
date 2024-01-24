@@ -1,0 +1,297 @@
+:root {
+    --background: rgb(79, 6, 6);
+    --foreground: rgb(255, 255, 255);
+    --background-variant: #6f6f6f86;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Yellowtail;
+    src: url(../fonts/Yellowtail-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+/* ----------- BODY -------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: url("../img/aaron-burden-QJDzYT_K8Xg-unsplash.jpg");
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+/* -------------- NAV --------------- */
+
+.nav-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    height: 5.5rem;
+    padding: 1rem;
+    z-index: 99;
+}
+
+nav {
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    background-color: #36363674;
+    border-radius: 50rem;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin: auto;
+}
+
+.nav-close {
+    animation: navClose 0.2s ease-in;
+}
+
+@keyframes navClose {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 3.55rem;
+    }
+}
+
+.nav-open {
+    animation: navOpen 0.2s ease-in;
+}
+
+@keyframes navOpen {
+    from {
+        width: 3.55rem;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.nav-logo {
+    border-radius: 50%;
+    background-color: #00000056;
+    transition: 0.3s;
+}
+
+#nav-container {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: flex;
+    height: 90%;
+    justify-items: center;
+    margin-right: 0.1rem;
+    margin-left: 0.3rem;
+    transition: 0.3s;
+}
+
+nav li a {
+    display: flex;
+    border-radius: 100rem;
+    width: 3rem;
+    color: var(--foreground);
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: none;
+    transition: 0.2s;
+}
+
+nav li a img {
+    filter: invert(96%) sepia(100%) saturate(15%) hue-rotate(126deg)
+        brightness(108%) contrast(100%);
+}
+
+.active {
+    background: #00000073;
+}
+
+li a:hover,
+.nav-logo:hover {
+    background: #00000028;
+    transition: 0.3s;
+}
+
+.hide {
+    width: 3.55rem;
+}
+
+.hide #nav-container {
+    display: none;
+}
+
+.menuAlt {
+    background: #9a9a9a2f;
+    transition: 0.3s;
+}
+
+/* ------------- HERO PAGE ---------- */
+
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    color: #ffffffbc;
+}
+
+h1 a {
+    font-family: Yellowtail, sans-serif;
+    color: var(--foreground);
+    font-size: 4rem;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-mask-image: linear-gradient(
+        -75deg,
+        rgba(0, 0, 0, 0.6) 30%,
+        #000 50%,
+        rgba(0, 0, 0, 0.6) 70%
+    );
+    -webkit-mask-size: 200%;
+    animation: shine 3s linear infinite;
+    cursor: auto;
+}
+
+@keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+    to {
+        -webkit-mask-position: -50%;
+    }
+}
+
+.hero {
+    text-align: center;
+    height: 100vh;
+    background: url(../img/andras-vas-Bd7gNnWJBkU-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero-logo {
+    max-width: 25rem;
+    position: relative;
+    display: flex;
+    width: 80%;
+}
+
+.hero-logo-image {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 50%;
+    background-image: url(../img/wp6048908-sunset-minimal-wallpapers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.hero-logo-icon {
+    width: 30%;
+    border-radius: 50%;
+    background-color: #0000003f;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.hero-text {
+    width: 100%;
+}
+
+/* -------------- Skills --------------- */
+
+#skills {
+    background: url(../img/wp6048908-sunset-minimal-wallpapers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 40rem;
+}
+
+.skills-info h3 {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.skills-info {
+    background-color: #ffffff54;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 1rem;
+    width: 12rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 10%;
+    top: 123%;
+    padding: 1rem 0;
+    -webkit-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    transition: 0.2s;
+}
+
+.skills-info ul {
+    margin: 0;
+    padding: 0;
+}
+
+.skills-info li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.3rem;
+}
