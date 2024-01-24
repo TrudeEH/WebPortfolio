@@ -1,4 +1,5 @@
 const navElements = document.querySelectorAll("nav #nav-container a");
+pointer = 1;
 
 function menuToggle(x) {
     if (x.classList.contains("menuAlt")) {
