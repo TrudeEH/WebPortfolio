@@ -317,6 +317,7 @@ h1 a {
 
 .certs-item,
 .projects-item {
+    position: relative;
     width: 100%;
     background-color: #ffffff54;
     border-radius: 1.2rem;
