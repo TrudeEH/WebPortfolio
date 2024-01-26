@@ -94,6 +94,24 @@ nav {
     }
 }
 
+@keyframes navClosePC {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 3.55rem;
+    }
+}
+
+@keyframes navOpenPC {
+    from {
+        width: 3.55rem;
+    }
+    to {
+        width: 50%;
+    }
+}
+
 .nav-logo {
     border-radius: 50%;
     background-color: #00000056;
@@ -216,7 +234,6 @@ h1 a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .hero-logo {
@@ -294,6 +311,34 @@ h1 a {
     width: 100%;
     text-align: center;
     margin-top: 0.3rem;
+}
+
+/* PC size */
+@media only screen and (min-width: 750px) {
+    .nav-container {
+        top: 0;
+    }
+
+    .nav-close {
+        animation: navClosePC 0.2s ease-in;
+    }
+
+    .nav-open {
+        animation: navOpenPC 0.2s ease-in;
+    }
+    nav {
+        width: 50%;
+    }
+    .hero {
+        flex-direction: row;
+    }
+    h1 a {
+        font-size: 5rem;
+    }
+    .hero-text {
+        width: fit-content;
+        margin-right: 10%;
+    }
 }
 
 /* -------------- Certs and Projects--------------- */
@@ -422,6 +467,72 @@ h1 a {
     left: 20%;
 }
 
+/* -------------- Contact Bubbles -------- */
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-bottom: 7rem;
+    background: url("../img/andras-vas-Bd7gNnWJBkU-unsplash.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-bubble {
+    display: flex;
+    height: 5rem;
+    background: #78787848;
+    border-radius: 99rem;
+    width: fit-content;
+    padding: 1rem;
+    margin-top: 2rem;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+}
+
+.contact-bubble a {
+    height: 100%;
+    background: #ffffff64;
+    border-radius: 50%;
+    object-fit: cover;
+    -webkit-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
+    transition: 0.4s;
+}
+
+.contact-bubble a:hover {
+    background: #ffffffbd;
+    transform: scale(104%);
+    transition: 0.4s;
+    -webkit-box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+}
+
+.contact-bubble img {
+    height: 100%;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+
+.contact-bubble a:last-child {
+    margin-left: 1rem;
+}
+
+.contact-bubble:hover {
+    transform: scale(104%);
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 42px -14px rgba(0, 0, 0, 0.75);
+}
+
 /* -------------- Common Rules ----------- */
 
 .hero,
@@ -440,7 +551,9 @@ h1 a {
 .skills-info,
 .hero-logo-icon,
 nav,
-.title-bubble {
+.title-bubble,
+.contact-bubble,
+.contact-bubble img {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 }
