@@ -276,13 +276,6 @@ h1 a {
     color: rgb(255, 255, 255);
 }
 
-.skills-info h3 {
-    margin: 0;
-    margin-bottom: 1rem;
-    padding: 0;
-    font-size: 1.5rem;
-}
-
 .skills-info {
     background-color: #ffffff54;
     border-radius: 1rem;
@@ -311,34 +304,6 @@ h1 a {
     width: 100%;
     text-align: center;
     margin-top: 0.3rem;
-}
-
-/* PC size */
-@media only screen and (min-width: 750px) {
-    .nav-container {
-        top: 0;
-    }
-
-    .nav-close {
-        animation: navClosePC 0.2s ease-in;
-    }
-
-    .nav-open {
-        animation: navOpenPC 0.2s ease-in;
-    }
-    nav {
-        width: 50%;
-    }
-    .hero {
-        flex-direction: row;
-    }
-    h1 a {
-        font-size: 5rem;
-    }
-    .hero-text {
-        width: fit-content;
-        margin-right: 10%;
-    }
 }
 
 /* -------------- Certs and Projects--------------- */
@@ -556,4 +521,82 @@ nav,
 .contact-bubble img {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+}
+
+/* PC size */
+@media only screen and (min-width: 750px) {
+    .nav-container {
+        top: 0;
+    }
+
+    .nav-close {
+        animation: navClosePC 0.2s ease-in;
+    }
+
+    .nav-open {
+        animation: navOpenPC 0.2s ease-in;
+    }
+    nav {
+        width: 50%;
+    }
+    .hero {
+        flex-direction: row;
+    }
+    h1 a {
+        font-size: 5rem;
+    }
+    .hero-text {
+        width: fit-content;
+        margin-right: 10%;
+    }
+    .title-main {
+        height: 3rem;
+        font-size: 150%;
+        width: 20rem;
+        padding: 0.7rem 0px;
+    }
+    .skills-info {
+        font-size: 1.2rem;
+        padding: 2rem 0;
+        width: 16rem;
+    }
+    .certs-item:nth-child(2) {
+        margin-left: 2rem;
+    }
+    #certs .item-container {
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+    }
+    #projects .item-container {
+        margin: 1rem;
+        display: grid;
+        gap: 2rem 3rem;
+    }
+    #projects .item-container *:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    #projects .item-container *:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    #projects .item-container *:nth-child(4) {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    #projects .item-container *:nth-child(3) {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    #contact {
+        padding-bottom: 2rem;
+    }
+}
+
+/* TV size */
+@media only screen and (min-width: 1250px) {
+    .skills-info {
+        left: 20%;
+    }
 }
