@@ -323,6 +323,7 @@ h1 a {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    padding-right: 3.6rem;
 }
 
 .certs-item,
