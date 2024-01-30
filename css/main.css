@@ -323,7 +323,7 @@ h1 a {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    padding-right: 3.6rem;
+    padding-right: 3.77rem;
 }
 
 .certs-item,
@@ -592,6 +592,12 @@ nav,
     }
     #contact {
         padding-bottom: 2rem;
+    }
+    #projects {
+        padding-right: 3.77rem !important;
+    }
+    #certs {
+        padding-right: 2rem !important;
     }
 }
 
