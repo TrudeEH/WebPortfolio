@@ -426,6 +426,7 @@ h1 a {
     top: 0;
     left: 0;
     background: rgba(163, 163, 163, 0.298);
+    transform: translateX(1rem);
 }
 
 .title-skills {
