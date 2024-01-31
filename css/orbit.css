@@ -32,7 +32,7 @@
 .orbit-wrap > li {
     position: absolute;
     left: 70%;
-    top: 143%;
+    top: calc(100% + 20rem);
     transform: translate(-50%, -50%);
 }
 .orbit-wrap > li:hover ul {

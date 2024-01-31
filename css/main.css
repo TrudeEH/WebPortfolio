@@ -234,6 +234,7 @@ h1 a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .hero-logo {
