@@ -24,6 +24,7 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    width: 100vw;
 }
 
 ::-webkit-scrollbar {
@@ -287,7 +288,7 @@ h1 a {
     justify-content: center;
     position: absolute;
     left: 10%;
-    top: 123%;
+    top: calc(100% + 15rem);
     padding: 1rem 0;
     -webkit-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 48px -24px rgba(0, 0, 0, 0.75);
@@ -431,6 +432,13 @@ h1 a {
 
 #projects .title-main {
     transform: translateX(1rem);
+}
+
+/* Bug fix that should only apply to mobile. (temp fix) */
+@media only screen and (max-width: 750px) {
+    #certs .title-main {
+        transform: translateX(1rem);
+    }
 }
 
 .title-skills {
