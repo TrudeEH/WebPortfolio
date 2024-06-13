@@ -1,1 +1,1 @@
-https://trudeeh.github.io/WebPortfolio/
+https://me.trude.dev
