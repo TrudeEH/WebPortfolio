@@ -102,7 +102,6 @@ class Sun extends CelestialBody {
 
 // Create celestial bodies
 const sun = new Sun(3, 0xfcba03);
-sun.material.wireframe = true;
 scene.add(sun);
 
 const hardwareCore = new Sun(0.6, 0xFFFF8F); // PC repair - Phone repair - PC Building
@@ -147,6 +146,8 @@ scene.add(hugoMoon);
 const gitDwarf = new CelestialBody(0.15, 0xFFFFF, 25, 0.02, 1.6);
 scene.add(gitDwarf);
 
+var target = null;
+
 // ANIMATIONS
 function animate() {
   requestAnimationFrame( animate );
@@ -168,6 +169,18 @@ function animate() {
   hugoMoon.updatePosition();        // HUGO
   gitDwarf.updatePosition()       // GIT/GITHUB
 
+  if (target != null) {
+    camera.position.setZ(target.position.z + 4);
+    camera.position.setY(target.position.y + 1);
+    camera.position.setX(target.position.x + 2);
+    let point = target.position;
+    camera.lookAt( point );
+  }
+
+  if (target == sun) {
+    sun.material.wireframe = true;
+  }
+
   renderer.render ( scene, camera );
 }
 
@@ -177,8 +190,6 @@ function endAnimation() {
   // Point the camera to the 'Unknown'. A new adventure awaits.
   // Add contact form here.
 }
-
-
 
 // DEBUG
 // const lightHelper = new THREE.PointLightHelper(pointLight)
