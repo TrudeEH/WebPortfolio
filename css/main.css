@@ -1,5 +1,5 @@
 :root {
-  --bg: #121212
+  --bg: #181818;
 }
 
 * {
@@ -86,8 +86,6 @@ body {
   transform: translateX(1rem);
 }
 
-
-
 /* -------------- Contact Bubbles -------- */
 #contact {
   display: flex;
@@ -156,13 +154,48 @@ body {
 
 /* -------------- Common Rules ----------- */
 
-.hero,
-#skills,
 #certs,
-#projects {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.hero,
+#projects,
+#timeline,
+#contact {
+  border-radius: 30px;
+}
+
+.timeline-container,
+.certs-container,
+.projects-container,
+.hero-container {
+  padding-bottom: 16px;
+  padding-top: 0;
+}
+
+@media only screen and (min-width: 750px) {
+  .timeline-container,
+  .certs-container,
+  .projects-container,
+  .contact-container {
+    padding: 16px;
+    padding-top: 0;
+  }
+  .hero-container {
+    padding: 16px;
+  }
+  .title-main {
+    height: 3rem;
+    font-size: 150%;
+    width: 20rem;
+    padding: 0.7rem 0px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .hero {
+    border-radius: 0 0 30px 30px;
+  }
+  #contact {
+    border-radius: 30px 30px 0 0;
+  }
 }
 
 .certs-item a,
@@ -178,22 +211,3 @@ nav,
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
-
-/* PC size */
-@media only screen and (min-width: 750px) {
-  .title-main {
-    height: 3rem;
-    font-size: 150%;
-    width: 20rem;
-    padding: 0.7rem 0px;
-  }
-  .contact-container {
-    padding: 16px;
-    padding-top: 0;
-  }
-
-  #contact {
-    border-radius: 30px;
-  }
-}
-

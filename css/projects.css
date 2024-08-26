@@ -73,14 +73,6 @@
 }
 
 @media only screen and (min-width: 750px) {
-    .projects-container {
-        padding: 16px;
-        padding-top: 0;
-      }
-    
-      #projects {
-        border-radius: 30px;
-      }
   #projects .item-container {
     margin: 1rem;
     display: grid;
