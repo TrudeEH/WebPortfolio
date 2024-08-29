@@ -42,6 +42,7 @@ h1 a {
 
 .hero-container {
   height: 100vh;
+  min-height: 50rem;
   overflow: hidden;
 }
 
