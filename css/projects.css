@@ -1,5 +1,6 @@
 #projects {
-  background: url(../img/umberto-FewHpO4VC9Y-unsplash.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../img/ssd_bg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

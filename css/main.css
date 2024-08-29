@@ -207,7 +207,8 @@ body {
 nav,
 .title-bubble,
 .contact-bubble,
-.contact-bubble img {
+.contact-bubble img,
+.timeline-item {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }

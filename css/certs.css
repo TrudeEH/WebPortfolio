@@ -92,4 +92,10 @@
   #certs .title-main {
     transform: translateX(1rem);
   }
+  .certs-actions {
+    flex-direction: column;
+  }
+  .certs-item a:last-child {
+    margin-left: 0;
+  }
 }
