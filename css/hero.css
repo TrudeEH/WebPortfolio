@@ -42,6 +42,7 @@ h1 a {
 
 .hero-container {
   height: 100vh;
+  overflow: hidden;
 }
 
 .hero {
