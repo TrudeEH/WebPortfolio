@@ -60,12 +60,12 @@ h1 a {
 }
 
 .hero-logo {
-  min-width: 25rem;
-  min-height: 25rem;
   position: relative;
   display: flex;
-  width: 25rem;
-  height: 25rem;
+  width: 90vw;
+  height: 90vw;
+  max-width: 35rem;
+  max-height: 35rem;
   padding: 2rem;
 }
 
