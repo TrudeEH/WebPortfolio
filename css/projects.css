@@ -1,18 +1,20 @@
 #projects {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../img/ssd_bg.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  padding-right: 3.77rem;
+  background: url(../img/samsung-memory-boMKfQkphro-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#projects .item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-item {
@@ -64,6 +66,10 @@
   transition: 0.4s;
 }
 
+.projects-item a:last-child {
+  margin-left: 0.5rem;
+}
+
 .projects-item a:hover {
   background: #00000061;
   transform: scale(102%);
@@ -75,10 +81,12 @@
 
 @media only screen and (min-width: 750px) {
   #projects .item-container {
-    margin: 1rem;
     display: grid;
-    gap: 2rem 3rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    padding: 2rem;
   }
+
   #projects .item-container *:nth-child(1) {
     grid-row: 1;
     grid-column: 1;
@@ -95,10 +103,18 @@
     grid-row: 2;
     grid-column: 2;
   }
-  #contact {
-    padding-bottom: 2rem;
+
+  .projects-item {
+    margin: 0;
+    width: 100%;
   }
-  #projects {
-    padding-right: 3.77rem !important;
+}
+
+@media only screen and (max-width: 750px) {
+  .projects-actions {
+    flex-direction: column;
+  }
+  .projects-item a:last-child {
+    margin-left: 0;
   }
 }

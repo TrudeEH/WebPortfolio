@@ -81,10 +81,6 @@ body {
   background: rgba(163, 163, 163, 0.298);
 }
 
-#projects .title-main {
-  transform: translateX(1rem);
-}
-
 /* -------------- Contact Bubbles -------- */
 #contact {
   display: flex;

@@ -4,11 +4,17 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  padding-right: 3.77rem;
   background: url(../img/aaron-burden-QJDzYT_K8Xg-unsplash.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#certs .item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .certs-item {
@@ -87,11 +93,7 @@
   }
 }
 
-/* Bug fix that should only apply to mobile. (temp fix) */
 @media only screen and (max-width: 750px) {
-  #certs .title-main {
-    transform: translateX(1rem);
-  }
   .certs-actions {
     flex-direction: column;
   }
