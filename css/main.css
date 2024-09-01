@@ -8,12 +8,14 @@
 
 @font-face {
   font-family: Yellowtail;
-  src: url(../fonts/Yellowtail-Regular.ttf);
+  src: local(sans-serif), url(../fonts/Yellowtail-Regular.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: Roboto;
-  src: url(../fonts/Roboto-Regular.ttf);
+  src: local(sans-serif), url(../fonts/Roboto-Regular.ttf);
+  font-display: swap;
 }
 
 /* ----------- HTML - BODY -------------- */
